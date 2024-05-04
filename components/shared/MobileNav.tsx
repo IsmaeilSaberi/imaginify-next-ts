@@ -4,11 +4,11 @@ import { navLinks } from "@/constants";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 
 const MobileNav = () => {
-  const pathname = useParams();
+  const pathname = usePathname();
   return (
     <header className="header">
       <Link href={"/"} className="flex items-center gap-2 md:py-2">
